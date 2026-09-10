@@ -3,7 +3,7 @@
   1. Deploy the Code.gs file as a Google Apps Script Web App.
   2. Copy the Web App URL and paste it below.
 */
-const GOOGLE_APPS_SCRIPT_URL = "PASTE_YOUR_DEPLOYED_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const GOOGLE_APPS_SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1P5xb12v0n_mzKVR-KML1SJZ-JDeZ1bIjB-NZsCDw9hc/edit?usp=sharing";
 
 const form = document.getElementById("assignmentForm");
 const fileInput = document.getElementById("assignmentFile");
