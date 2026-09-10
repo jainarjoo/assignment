@@ -3,7 +3,7 @@
   1. Deploy the Code.gs file as a Google Apps Script Web App.
   2. Copy the Web App URL and paste it below.
 */
-const GOOGLE_APPS_SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1P5xb12v0n_mzKVR-KML1SJZ-JDeZ1bIjB-NZsCDw9hc/edit?usp=sharing";
+const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/a/macros/sunderdeep.ac.in/s/AKfycbwbBiO1pYotliF61NiIYfPzUv2GvuUOhF2KLX_8rXmLoxskDhdhCLNx57PYNT9vEYSx/exec";
 
 const form = document.getElementById("assignmentForm");
 const fileInput = document.getElementById("assignmentFile");
@@ -22,7 +22,7 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   hideMessage();
 
-  if (GOOGLE_APPS_SCRIPT_URL.includes("PASTE_YOUR")) {
+  if (GOOGLE_APPS_SCRIPT_URL.includes("https://script.google.com/a/macros/sunderdeep.ac.in/s/AKfycbwbBiO1pYotliF61NiIYfPzUv2GvuUOhF2KLX_8rXmLoxskDhdhCLNx57PYNT9vEYSx/exec")) {
     showMessage("error", "The portal is not connected to Google Sheets yet. Please ask the administrator to add the deployed Google Apps Script URL in script.js.");
     return;
   }
