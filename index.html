@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Assignment Submission Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="brand">
+      <div class="brand-mark">SG</div>
+      <div>
+        <strong>Assignment Portal</strong>
+        <span>B.Tech Submission System</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#submit">Submit Assignment</a>
+      <a href="#guidelines">Guidelines</a>
+      <a id="sheetLink" href="https://docs.google.com/spreadsheets/d/1P5xb12v0n_mzKVR-KML1SJZ-JDeZ1bIjB-NZsCDw9hc/edit?usp=sharing" target="_blank">View Sheet</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <span class="badge">B.Tech 3rd & 4th Year</span>
+        <h1>Online Assignment<br><span>Submission Portal</span></h1>
+        <p>Submit your assignment PDF securely. Your student details and assignment record will be saved automatically in the faculty Google Sheet.</p>
+        <a class="primary-btn" href="#submit">Submit Your Assignment</a>
+      </div>
+      <div class="hero-card">
+        <div class="hero-icon">📄</div>
+        <h3>Simple • Fast • Direct</h3>
+        <p>Fill your details, select your PDF, and submit.</p>
+        <div class="mini-stat"><span>Programs</span><b>CSE • AIML</b></div>
+        <div class="mini-stat"><span>Years</span><b>3rd • 4th</b></div>
+      </div>
+    </section>
+
+    <section id="submit" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Student Submission</span>
+        <h2>Submit Your Assignment</h2>
+        <p>Enter the details exactly as registered with the college and upload your assignment in PDF format.</p>
+      </div>
+
+      <form id="assignmentForm" class="form-card">
+        <div class="form-grid">
+          <div class="field">
+            <label for="studentName">Student Name <span>*</span></label>
+            <input id="studentName" name="studentName" type="text" placeholder="Enter full name" required>
+          </div>
+
+          <div class="field">
+            <label for="rollNo">Roll Number <span>*</span></label>
+            <input id="rollNo" name="rollNo" type="text" placeholder="Enter roll number" required>
+          </div>
+
+          <div class="field">
+            <label for="branch">Branch <span>*</span></label>
+            <select id="branch" name="branch" required>
+              <option value="">Select branch</option>
+              <option value="CSE">Computer Science & Engineering (CSE)</option>
+              <option value="AIML">Artificial Intelligence & Machine Learning (AIML)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="year">Year <span>*</span></label>
+            <select id="year" name="year" required>
+              <option value="">Select year</option>
+              <option value="3rd Year">B.Tech 3rd Year</option>
+              <option value="4th Year">B.Tech 4th Year</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="section">Section</label>
+            <input id="section" name="section" type="text" placeholder="e.g. A">
+          </div>
+
+          <div class="field">
+            <label for="semester">Semester</label>
+            <select id="semester" name="semester">
+              <option value="">Select semester</option>
+              <option value="Odd Semester">Odd Semester</option>
+              <option value="Even Semester">Even Semester</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject <span>*</span></label>
+            <input id="subject" name="subject" type="text" placeholder="Enter subject name" required>
+          </div>
+
+          <div class="field">
+            <label for="assignmentTitle">Assignment Title / Topic <span>*</span></label>
+            <input id="assignmentTitle" name="assignmentTitle" type="text" placeholder="Enter assignment topic" required>
+          </div>
+
+          <div class="field full">
+            <label for="email">College Email</label>
+            <input id="email" name="email" type="email" placeholder="Enter college email">
+          </div>
+
+          <div class="field full">
+            <label for="assignmentFile">Upload Assignment PDF <span>*</span></label>
+            <div class="upload-box" id="uploadBox">
+              <input id="assignmentFile" name="assignmentFile" type="file" accept="application/pdf,.pdf" required>
+              <div class="upload-content">
+                <div class="upload-icon">↑</div>
+                <strong>Choose PDF file</strong>
+                <span>Maximum recommended size: 10 MB</span>
+                <small id="fileName">No file selected</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label class="check-row">
+              <input id="declaration" type="checkbox" required>
+              <span>I confirm that the details entered above are correct and the uploaded PDF is my assignment.</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-footer">
+          <p><b>Important:</b> Do not close or refresh the page while the assignment is being submitted.</p>
+          <button class="submit-btn" id="submitBtn" type="submit">
+            <span id="btnText">Submit Assignment</span>
+            <span id="spinner" class="spinner hidden"></span>
+          </button>
+        </div>
+        <div id="message" class="message hidden"></div>
+      </form>
+    </section>
+
+    <section id="guidelines" class="section guidelines">
+      <div class="section-heading">
+        <span class="eyebrow">Before You Submit</span>
+        <h2>Submission Guidelines</h2>
+      </div>
+      <div class="guideline-grid">
+        <div class="guide-card"><b>01</b><h3>Correct Details</h3><p>Use your official name, roll number, branch and year.</p></div>
+        <div class="guide-card"><b>02</b><h3>PDF Only</h3><p>Upload the final assignment as a PDF file.</p></div>
+        <div class="guide-card"><b>03</b><h3>File Naming</h3><p>Recommended: RollNo_Subject_Assignment.pdf</p></div>
+        <div class="guide-card"><b>04</b><h3>One Submission</h3><p>Submit only the final version unless your faculty asks you to resubmit.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>B.Tech Assignment Submission Portal • CSE & AIML • 3rd & 4th Year</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
