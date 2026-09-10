@@ -3,7 +3,7 @@
   1. Deploy the Code.gs file as a Google Apps Script Web App.
   2. Copy the Web App URL and paste it below.
 */
-const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/a/macros/sunderdeep.ac.in/s/AKfycbwbBiO1pYotliF61NiIYfPzUv2GvuUOhF2KLX_8rXmLoxskDhdhCLNx57PYNT9vEYSx/exec";
+const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwIc0NcHKR7goQ7WcGY3GPdmf-jjWGc4K4-WM3GC9Q3iHbTPQUliWEthy9fcVG0KYtW/exec";
 
 const form = document.getElementById("assignmentForm");
 const fileInput = document.getElementById("assignmentFile");
@@ -22,7 +22,7 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   hideMessage();
 
-  if (GOOGLE_APPS_SCRIPT_URL.includes("https://script.google.com/a/macros/sunderdeep.ac.in/s/AKfycbwbBiO1pYotliF61NiIYfPzUv2GvuUOhF2KLX_8rXmLoxskDhdhCLNx57PYNT9vEYSx/exec")) {
+  if (GOOGLE_APPS_SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbwIc0NcHKR7goQ7WcGY3GPdmf-jjWGc4K4-WM3GC9Q3iHbTPQUliWEthy9fcVG0KYtW/exec")) {
     showMessage("error", "The portal is not connected to Google Sheets yet. Please ask the administrator to add the deployed Google Apps Script URL in script.js.");
     return;
   }
@@ -59,7 +59,7 @@ form.addEventListener("submit", async (e) => {
       text/plain is intentional: it avoids a browser CORS preflight.
       The Apps Script doPost() receives and processes the JSON body.
     */
-    await fetch(https://script.google.com/a/macros/sunderdeep.ac.in/s/AKfycbwbBiO1pYotliF61NiIYfPzUv2GvuUOhF2KLX_8rXmLoxskDhdhCLNx57PYNT9vEYSx/exec, {
+    await fetch(https://https://script.google.com/macros/s/AKfycbwIc0NcHKR7goQ7WcGY3GPdmf-jjWGc4K4-WM3GC9Q3iHbTPQUliWEthy9fcVG0KYtW/exec, {
       method: "POST",
       mode: "no-cors",
       headers: {"Content-Type": "text/plain;charset=utf-8"},
