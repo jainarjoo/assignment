@@ -22,7 +22,7 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   hideMessage();
 
-  if (!GOOGLE_APPS_SCRIPT_URL || GOOGLE_APPS_SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbzqXsFWb7KvQDc1LPs0K1nIaA2o99nlqWB21DllQ_UyAC4kacdOyhaiuwJR-8rI4Knv/exec")) {
+ if (!GOOGLE_APPS_SCRIPT_URL || GOOGLE_APPS_SCRIPT_URL.includes("PASTE_YOUR")) {
   showMessage("error", "The portal is not connected to Google Sheets yet. Please ask the administrator to add the deployed Google Apps Script URL in script.js.");
   return;
 }
