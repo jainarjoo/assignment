@@ -59,7 +59,7 @@ form.addEventListener("submit", async (e) => {
       text/plain is intentional: it avoids a browser CORS preflight.
       The Apps Script doPost() receives and processes the JSON body.
     */
-    await fetch(GOOGLE_APPS_SCRIPT_URL, {
+    await fetch(https://script.google.com/a/macros/sunderdeep.ac.in/s/AKfycbwbBiO1pYotliF61NiIYfPzUv2GvuUOhF2KLX_8rXmLoxskDhdhCLNx57PYNT9vEYSx/exec, {
       method: "POST",
       mode: "no-cors",
       headers: {"Content-Type": "text/plain;charset=utf-8"},
