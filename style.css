@@ -1,4 +1,175 @@
-:root{
+/* =========================================
+   SUBMISSION LOADING STATE
+========================================= */
+
+#submitBtn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  border: 3px solid rgba(255,255,255,0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: submissionSpin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+#spinner.hidden {
+  display: none;
+}
+
+@keyframes submissionSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.message.success {
+  width: min(90%, 650px);
+  margin: 40px auto;
+  padding: 35px 30px;
+
+  text-align: center;
+
+  border-radius: 18px;
+
+  background: #f0fff4;
+  border: 2px solid #38a169;
+
+  box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+
+  animation: successAppear 0.45s ease-out;
+}
+
+
+/* Green tick */
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #38a169;
+  color: white;
+
+  font-size: 42px;
+  font-weight: bold;
+
+  box-shadow: 0 5px 15px rgba(56,161,105,0.35);
+}
+
+
+/* Main heading */
+
+.success-title {
+  font-size: 26px;
+  font-weight: 700;
+
+  color: #22543d;
+
+  margin-bottom: 12px;
+}
+
+
+/* Main message */
+
+.success-text {
+  font-size: 18px;
+  font-weight: 500;
+
+  color: #276749;
+
+  margin-bottom: 14px;
+}
+
+
+/* Important record instruction */
+
+.success-note {
+  display: inline-block;
+
+  padding: 12px 18px;
+
+  margin-top: 5px;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #2f855a;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  border: 1px solid #9ae6b4;
+}
+
+
+/* Animation */
+
+@keyframes successAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .message.success {
+    width: 88%;
+    padding: 28px 20px;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+  }
+
+  .success-title {
+    font-size: 21px;
+  }
+
+  .success-text {
+    font-size: 16px;
+  }
+
+  .success-note {
+    font-size: 14px;
+  }
+
+}:root{
   --ink:#182230;
   --muted:#657084;
   --line:#dfe5ee;
