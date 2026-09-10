@@ -22,10 +22,10 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   hideMessage();
 
-  if (GOOGLE_APPS_SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycbxxAuUH29UCuhg5xoPrtHC1vuUQzYhjI-noXY5gZbFXmC6zXubrgwu5YLG3YKPITsnS/exec")) {
-    showMessage("error", "The portal is not connected to Google Sheets yet. Please ask the administrator to add the deployed Google Apps Script URL in script.js.");
-    return;
-  }
+  if (!GOOGLE_APPS_SCRIPT_URL || GOOGLE_APPS_SCRIPT_URL.includes("PASTE_YOUR")) {
+  showMessage("error", "The portal is not connected to Google Sheets yet. Please ask the administrator to add the deployed Google Apps Script URL in script.js.");
+  return;
+}
 
   const file = fileInput.files[0];
   if (!file) return showMessage("error", "Please select your assignment PDF.");
